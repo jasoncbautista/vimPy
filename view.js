@@ -1,4 +1,7 @@
 (function(){
-    var myFile = function(){
+    var {{myFile}} = function(){
     };
+
+
+    //{{myFile}}
 }):
