@@ -1,3 +1,4 @@
+" http://brainacle.com/how-to-write-vim-plugins-with-python.html
 " Vim comments start with a double quote.
 " Function definition is VimL. We can mix VimL and Python in
 " function definition.
@@ -26,7 +27,7 @@ import flask
 
 first_argument = vim.eval("a:arg1") #or vim.eval("a:0")
 print "yo"
-# print first_argument
+print first_argument
 
 
 EOF
