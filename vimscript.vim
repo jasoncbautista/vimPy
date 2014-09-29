@@ -11,6 +11,7 @@ python << EOF
 import vim, urllib2
 # we need json for parsing the response
 import json
+import flask
 
 # we define a timeout that we'll use in the API call. We don't want
 # users to wait much.
