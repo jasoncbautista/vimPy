@@ -27,8 +27,9 @@ import flask
 
 first_argument = vim.eval("a:arg1") #or vim.eval("a:0")
 
-file_str = "wassa - " 
-vim.current.buffer.append(" write to file: %s"%file_str)
+file_str = "wassa - "  + first_argument
+vim.current.buffer.append(" file: %s"%file_str)
+vim.current.buffer.prepend(" file: %s"%file_str)
 print "yo"
 print first_argument
 
