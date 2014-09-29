@@ -21,21 +21,15 @@ python << EOF
 # the vim module contains everything we need to interface with vim from
 # python. We need urllib2 for the web service consumer.
 import vim, urllib2
+import sys
 # we need json for parsing the response
 import json
-# from readFile import create_from_template
+sys.path.append(vim.eval('expand("<sfile>:h")'))
+from readFile import create_from_template
 
 
 first_argument = vim.eval("a:arg1") #or vim.eval("a:0")
 
-
-def create_from_template(name):
-    template_name = "view.js"
-    data = ""
-    with open(template_name, "r") as my_template_file:
-        data=my_template_file.read().replace("{{myFile}}", name)
-
-    return data.split("\n")
 
      
 vim.current.buffer[:] = create_from_template(first_argument)
