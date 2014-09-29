@@ -2,7 +2,7 @@
 " Vim comments start with a double quote.
 " Function definition is VimL. We can mix VimL and Python in
 " function definition.
-function! Hallo(arg1, arg_2)
+function! Hallo(arg1 )
 
     " Get the first argument by name in VimL
     " let firstarg=a:arg1
@@ -26,6 +26,9 @@ import json
 import flask
 
 first_argument = vim.eval("a:arg1") #or vim.eval("a:0")
+
+file_str = "wassa - " 
+vim.current.buffer.append(" write to file: %s"%file_str)
 print "yo"
 print first_argument
 
